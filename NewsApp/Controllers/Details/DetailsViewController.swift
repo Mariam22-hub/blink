@@ -3,13 +3,12 @@
 import UIKit
 import SDWebImage
 
-class DetailsViewController: UIViewController, DetailsViewModelDelegate {
+class DetailsViewController: UIViewController {
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configController()
-        viewModel.delegate = self
     }
 
     // IBoutlets
@@ -60,12 +59,6 @@ class DetailsViewController: UIViewController, DetailsViewModelDelegate {
         
         newsImage.sd_setImage(with: viewModel.urlToImage)
     }
-    
-    
-    func sendDataToDetailsVC(newsList: NewsListModel, viewModel: detailsViewModel) {
-        
-    }
-    
-    
+
     
 }

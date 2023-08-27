@@ -1,10 +1,6 @@
 
 import Foundation
 
-protocol DetailsViewModelDelegate{
-    func sendDataToDetailsVC(newsList: NewsListModel, viewModel: detailsViewModel)
-}
-
 
 class detailsViewModel{
     
@@ -17,7 +13,7 @@ class detailsViewModel{
     var author: String
     var url: URL?
     
-    var delegate: DetailsViewModelDelegate?
+//    var delegate: DetailsViewModelDelegate?
     
     init(newsList: NewsListModel){
         self.newList = newsList
@@ -29,7 +25,7 @@ class detailsViewModel{
         self.urlToImage = URL(string: newList.urlToImage ?? "")
         self.url = newsList.url
         
-        self.delegate?.sendDataToDetailsVC(newsList: newsList, viewModel: self)
+//        self.delegate?.sendDataToDetailsVC(newsList: newsList, viewModel: self)
         
     }
 }
